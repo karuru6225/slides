@@ -14,12 +14,12 @@
 	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
 	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
 	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
-	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.custom.css">
 	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
-	<link rel="stylesheet" href="themes/style/swiss.css">
+	<link rel="stylesheet" href="themes/style/ncdc.css">
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
@@ -27,21 +27,84 @@
 	<!-- Required Modernizr file -->
 	<script src="modernizr.custom.js"></script>
 </head>
-<body class="deck-container">
-
+<body>
+<div class="slide-header"></div>
+<div class="logo"></div>
+<div class="deck-container">
 <!-- Begin slides. Just make elements with a class of slide. -->
 
+
 <section class="slide">
-	<h1>Slide</h1>
+	<h1>社内勉強会<br>2013/05/31</h1>
 </section>
 
 <section class="slide">
-	<h1>Content</h1>
+	<h1>Ruby on Railsと<br>WebアプリのAPI</h1>
 </section>
 
 <section class="slide">
-	<h1>Here</h1>
+	<h2>もくじ</h2>
+	<ol>
+		<li>
+			<h3>Ruby on Railsの特徴</h3>
+		</li>
+		<li>
+			<h3>APIとその実装</h3>
+		</li>
+		<li>
+			<h3>WebアプリとRESTと認証</h3>
+		</li>
+		<li>
+			<h3>COGOOとの比較</h3>
+		</li>
+	</ol>
 </section>
+
+<section class="slide">
+	<h2>Rubyの特徴</h2>
+	<ul>
+		<li>
+			<h3>RESTなAPIを自動生成</h3>
+		</li>
+		<li>
+			<h3>とくちょー</h3>
+		</li>
+		<li>
+			<h3>とくちょー</h3>
+		</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>APIとその実装</h2>
+	<ol>
+		<li>
+			<h3>DBテーブル定義+アクセス制御=API</h3>
+			原則として、テーブルのカラムそれぞれにアクセス制御をした程度のものをAPIに
+		</li>
+		<li>
+			<h3>API=Model+Controller</h3>
+			ControllerのみのAPIはダメ。検索はModelに任せる！
+		</li>
+		<li>
+			<h3></h3>
+		</li>
+	</ol>
+</section>
+
+<section class="slide">
+	<h2>WebアプリとRESTと認証</h2>
+</section>
+
+<section class="slide">
+	<h2>COGOOとの比較</h2>
+</section>
+<!--
+
+
+
+
+-->
 
 <!-- End slides. -->
 
@@ -92,5 +155,6 @@
 		$.deck('.slide');
 	});
 </script>
+</div>44b1ee->144483
 </body>
 </html>

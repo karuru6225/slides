@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>Your deck.js Presentation</title>
+	<title>社内勉強会-2013/05/31</title>
 	
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="core/deck.core.css">
@@ -79,21 +79,34 @@
 	<h2>APIとその実装</h2>
 	<ol>
 		<li>
-			<h3>DBテーブル定義+アクセス制御=API</h3>
-			原則として、テーブルのカラムそれぞれにアクセス制御をした程度のものをAPIに
+			<h3>DBテーブル定義+アクセス制御=API(で扱うリソース）</h3>
+			RESTなAPIで扱うリソースの定義は、テーブルのカラムをベースに<br>
+			アクセス制御をした程度のものにする<br>
+			→自動生成し安く（View,Controller,Model）
 		</li>
 		<li>
 			<h3>API=Model+Controller</h3>
-			ControllerのみのAPIはダメ。検索はModelに任せる！
-		</li>
-		<li>
-			<h3></h3>
+			ControllerのみのAPIはダメ。DBの部分はModelに任せる！<br>
+			→自動生成しやすく（View,Controller）
 		</li>
 	</ol>
 </section>
 
 <section class="slide">
 	<h2>WebアプリとRESTと認証</h2>
+		<p>RESTなAPIと認証は相性が少し悪い・・・だから？</p>
+	<ul>
+		<li class="slide">
+			<h3>RESTと認証</h3>
+			<p>RESTなAPIに認証機能は入れない</p>
+			<p>APIは認証済であることを前提に作る</p>
+		</li>
+		<li class="slide">
+			<h3>認証後にWebアプリ</h3>
+			認証は通常のフォーム＆通常のページ遷移で制御<br>
+			認証後のページでWebアプリをロード
+		</li>
+	</ul>
 </section>
 
 <section class="slide">
